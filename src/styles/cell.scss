@@ -1,0 +1,23 @@
+$active-color: #3c3c3c;
+
+.list__cell {
+  background-color: $active-color;
+  width: 25vw;
+  height: calc(25vw * 2 / 3);
+  overflow: hidden;
+  display: flex;
+  padding: 10px 10px 10px 10px;
+  flex-direction: column;
+
+  &__image {
+    height: 80%;
+    flex: 1;
+  }
+  &__name {
+    color: black;
+    text-align: left;
+    font-size: 2vw;
+    margin: 0px;
+  }
+
+}

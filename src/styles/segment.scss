@@ -1,0 +1,22 @@
+$active-color: #3c3c3c;
+
+.list__segment {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid $active-color;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 40vw;
+  font-size: 2vw;
+  div {
+    flex: 1;
+    padding: 15px;
+  }
+  &--active {
+    background-color: $active-color;
+  }
+  &--none {
+    background-color: transparent;
+  }
+}

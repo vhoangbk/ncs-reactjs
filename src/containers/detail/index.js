@@ -1,14 +1,21 @@
 import React from 'react';
+import '../../styles/detail.scss';
+import { useParams } from "react-router-dom";
+import {useSelector} from 'react-redux';
+import {getData} from "../../store/selectors";
 
-class DetailContainer extends React.Component {
+function DetailContainer() {
 
-  render() {
-    return (
-      <div>
-        <h1>Detail</h1>
-      </div>
-    )
-  }
+
+  let { id } = useParams();
+  let data = useSelector(state => getData(state, id));
+  console.log(data);
+
+  return (
+    <div className="detail">
+      <h1 className="detail__title">Detail</h1>
+      <p>{id}</p>
+    </div>
+  )
 }
-
 export default DetailContainer;
