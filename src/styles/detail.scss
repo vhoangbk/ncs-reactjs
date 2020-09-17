@@ -1,10 +1,70 @@
+$text-color: #505050;
+
 .detail {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
   text-align: center;
+  > div {
+    height: 100vh;
+    overflow: hidden;
+  }
+  &__clientlogo {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+  }
+  &__nitecologo {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
+  &__brief-image {
+    width: 100vw;
+  }
+  &__brief-name {
+    font-size: 4vw;
+    color: $text-color;
+    margin-top: 2vh;
+    line-height: 4vw;
+    margin-bottom: 2vh;
+    font-weight: 900;
+  }
+  &__brief-description {
+    white-space: pre-line;
+    margin: 0px 130px;
+    font-size: 2vw;
+    color: $text-color;
+  }
+  &__solution-image {
+    width: 100vw;
+    margin-top: 30px;
+  }
+  &__solution-name {
+    font-size: 4vw;
+    color: $text-color;
+    margin-top: 2vh;
+    line-height: 4vw;
+    margin-bottom: 2vh;
+    font-weight: 900;
+  }
+  &__solution-description {
+    white-space: pre-line;
+    margin: 0px 130px;
+    font-size: 2vw;
+    color: $text-color;
+  }
+  &__technical {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: row;
+  }
+  &__technical-image {
+    width: 65vw;
+  }
+  &__technical-item {
+    color: $text-color;
+    list-style-type: none;
+    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAbBAMAAAAE3iuqAAAAMFBMVEUAAADFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcVjt1ybAAAAD3RSTlMAZhHMme67dzOqVUQi3Yih5/lnAAAAhElEQVQoz2XOsQ2DUAyEYTJJMkMmyBgpMwMLJIOkZgcqRmAFRkACSnRYBvODuerp3SfbxTnVv0i5afqlr7v0zkjBQJZPQpb+gtRd0Oi3lEf08nJ4JGTlMyMZO6FGMraizX/lzNE2tV3bQCyad8SmQDAQDAQDOQPBQLBAMBAMBAtE6pL3AvzZrSIzsnBuAAAAAElFTkSuQmCC);
+    padding: 0;
+    line-height: 50px;
+    text-align: left;
+  }
 }

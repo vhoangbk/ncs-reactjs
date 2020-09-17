@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useSelector} from "react-redux";
 import {getList} from "../../store/selectors";
 import '../../styles/list.scss';
@@ -10,9 +10,16 @@ function ListContainer() {
 
    let history = useHistory();
    const listData = useSelector(getList);
+   const [data, setData] = useState(listData);
 
    const onChangeSegment = (value) => {
       console.log('onChangeSegment', value);
+      if (value === 0) {
+        setData(listData);
+      }else{
+        let dataFilter = listData.filter(e => e.group_mask === 1);
+        setData(dataFilter);
+      }
    };
 
    const onCellClick = (id) => {
@@ -31,7 +38,7 @@ function ListContainer() {
      <div className="list">
        <Segment onChangeValue={onChangeSegment}/>
        <ul className="list__grid">
-         {listData.map( e => renderItem(e))}
+         {data.map( e => renderItem(e))}
        </ul>
 
      </div>
