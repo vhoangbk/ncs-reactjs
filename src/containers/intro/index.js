@@ -3,6 +3,7 @@ import {useDispatch} from "react-redux";
 import {fetchDataSagaAction, fetchListSagaAction} from "../../store/actions";
 import '../../styles/intro.scss';
 import { useHistory } from "react-router-dom";
+import BackgroundVideo from '../../components/BackgroundVideo';
 
 function IntroContainer() {
 
@@ -20,6 +21,7 @@ function IntroContainer() {
 
   return (
     <div className="intro">
+      <BackgroundVideo image="video_bg.mov"/>
       <img className="intro__logo" src='/images/niteco-logo.png'/>
       <h1 className="intro__title">Transforming Digital into Business Solutions</h1>
       <div className="intro__line"></div>
