@@ -2,7 +2,7 @@ $text-color: #505050;
 
 .detail {
   text-align: center;
-  &__slide {
+  &__swiper {
     min-height: 100vh;
   }
   &__clientlogo {
@@ -18,6 +18,8 @@ $text-color: #505050;
   &__brief-image {
     width: 100vw;
     height: auto;
+    margin: 0;
+    padding: 0;
   }
   &__brief-name {
     font-size: 4vw;
