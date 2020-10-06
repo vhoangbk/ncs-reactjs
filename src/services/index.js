@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-export const URL_LIST = 'https://raw.githubusercontent.com/vhoangbk/craw-node/master/list.json';
+const URL_BASE = 'https://ncs-node.herokuapp.com/';
 
-export const URL_DATA = 'https://raw.githubusercontent.com/vhoangbk/craw-node/master/data.json';
+export const URL_LIST = `${URL_BASE}/article_list`;
+
+export const URL_DATA = `${URL_BASE}/article_data`;
 
 export const get = (url) => axios.get(url);
